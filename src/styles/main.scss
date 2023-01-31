@@ -10,5 +10,11 @@ body {
   box-sizing: border-box;
 }
 
+.catalog {
+  display: grid;
+  gap: 48px;
+
+}
+
 @import "_header.scss";
 @import "_catalog.scss";
