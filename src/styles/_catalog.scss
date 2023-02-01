@@ -1,3 +1,5 @@
+$width-card: 200px;
+
 .catalog {
   display: grid;
   gap: 48px;
@@ -5,27 +7,29 @@
   max-width: 944px;
   margin: 0 auto;
 
+  
+
   @media (min-width: 487px) {
-    grid-template-columns: 100%;
+    grid-template-columns: $width-card;
   }
 
   @media (min-width: 488px) and (max-width: 767px) {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, $width-card);
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(3, $width-card);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, $width-card);
   }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $width-card;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
